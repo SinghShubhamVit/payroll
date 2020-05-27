@@ -30,7 +30,7 @@ class EmployeeSalary < ApplicationRecord
                 total_deductions
                 net_amount
                 amount_in_words]
-    (2..spreadsheet.last_row).each do |i|
+    (3..spreadsheet.last_row).each do |i|
       row = Hash[[header, spreadsheet.row(i)].transpose]
       employee_salary = company_payroll.employee_salaries.build(row)
       employee_salary.save!
