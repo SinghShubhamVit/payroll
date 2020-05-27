@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'employee_salaries/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'home#payroll_upload'
   post 'payroll_parse', to: 'home#payroll_parse'
