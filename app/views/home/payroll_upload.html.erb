@@ -1,0 +1,7 @@
+<%= form_for :company_payroll, url: "/payroll_parse" do |form| %>
+  <%= select_month(Date.today, :field_name => 'month', :prefix => 'company_payroll') %>
+  <%= select_year(Date.today, :field_name => 'year', :prefix => 'company_payroll') %>
+  <%= form.collection_select :company_id, @companies,:id,:name, {:selected => @default_company}, include_blank: true %>
+  <%= form.file_field :file %> 
+  <%= form.submit  %>
+<% end  %>

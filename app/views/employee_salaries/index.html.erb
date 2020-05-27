@@ -1,0 +1,73 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Month</th>
+        <th>Employee Name</th>
+        <th>Employee ID</th>
+        <th>Designation</th>
+        <th>Department</th>
+        <th>Mode of Payment</th>
+        <th>Bank A/C No.</th>
+        <th>Pan</th>
+        <th>PF_Number</th>
+        <th>Present Days</th>
+        <th>Basic of PF</th>
+        <th>Other_Basic</th>
+        <th>HRA</th>
+        <th>Incentives</th>
+        <th>Ieave Encashment</th>
+        <th>LIC</th>
+        <th>Gross Total</th>
+        <th>PF</th>
+        <th>ESI</th>
+        <th>PT</th>
+        <th>TDS</th>
+        <th>Total Deductions</th>
+        <th>Net Amount</th>
+        <th>Amount in Words</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @employee_salaries.each do |salary| %>
+        <tr>
+          <td><%= salary.month %></td>
+          <td><%= salary.employee_name %></td>
+          <td><%= salary.employee_id%></td>
+          <td><%= salary.designation %></td>
+          <td><%= salary.department %></td>
+          <td><%= salary.mode_of_payment%></td>
+          <td><%= salary.bank_ac_no%></td>          
+          <td><%= salary.pan%></td>
+          <td><%= salary.pf_number%></td>
+          <td><%= salary.present_days%></td>
+          <td><%= salary.basic_of_pf%></td>
+          <td><%= salary.other_basic%></td>
+          <td><%= salary.hra%></td>
+          <td><%= salary.incentives%></td>
+          <td><%= salary.leave_encashment%></td>
+          <td><%= salary.lic%></td>
+          <td><%= salary.gross_total%></td>
+          <td><%= salary.pf%></td>
+          <td><%= salary.esi%></td>
+          <td><%= salary.pt%></td>
+          <td><%= salary.tds%></td>
+          <td><%= salary.total_deductions%></td>
+          <td><%= salary.net_amount%></td>
+          <td><%= salary.amount_in_words%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+                
+                
+                
+                
+                
+  
+                
+                
+                
+                
+                
+                
