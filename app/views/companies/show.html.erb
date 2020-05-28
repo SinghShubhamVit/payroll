@@ -1,0 +1,21 @@
+<h1><%= @company.name %></h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Month</th>
+        <th>Year</th>
+        <th>Show</th>
+      </tr>
+    </thead>
+
+     <tbody>
+      <% @payrolls.each do |payroll| %>
+        <tr>
+          <td><%= payroll_month[payroll.month] %></td>
+          <td><%= payroll.year %></td>
+          <td><%= link_to '<button type="button">Show</button>'.html_safe, company_company_payroll_employee_salaries_path(company_id: @company.id, company_payroll_id: payroll.id) %></td>
+        </tr>
+      <% end %> 
+    </tbody>  
+</table>       
+

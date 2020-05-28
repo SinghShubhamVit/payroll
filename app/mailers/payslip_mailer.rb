@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-class ApplicationMailer < ActionMailer::Base
+class PayslipMailer < ApplicationMailer
   default from: 'subhams914@gmail.com'
   layout 'mailer'
-  def send_payslip
-    attachments['payslip.pdf'] = File.read('public/payslip.pdf')
+
+  def send_payslip(pdf, file_name)
+    attachments[file_name] = pdf
     mail(to: 'nik@complitech.us', subject: 'Payslip')
   end
 end

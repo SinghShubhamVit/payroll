@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="head">
+    <h1>
+      <strong><%= @company.name%></strong>
+    </h1>
+    <br>
+    <h2><%= "#{@company.primary_address},#{@company.district},#{@company.state},#{@company.pin}" %></h2>
+    <h2><%="CIN:#{@company.cin}" %></h2>
+    <br>
+    <br>
+    <h2>
+      <strong>
+        <%="Payslip for the month of #{@salary.month}, #{@payroll.year}"%>
+      </strong>
+    </h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <dl>
+      <dt>Name:</dt>
+      <dd><%= @salary.employee_name %></dd>
+      <dt>Designation:</dt>
+      <dd><%= @salary.designation %></dd>
+      <dt>Department:</dt>
+      <dd><%= @salary.department%></dd>
+      <dt>Effective Work Day</dt>
+      <dd><%= @salary.present_days %></dd>
+    </dl>
+  </div>
+  <div class="col-6">
+    <dt>Employee ID:</dt>
+      <dd><%= @salary.employee_id%></dd>
+      <dt>Bank A/C No. </dt>
+      <dd><%= @salary.bank_ac_no%></dd>
+      <dt>PAN No.</dt>
+      <dd><%= @salary.pan%></dd>
+    </dl>    
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <dt>Basic of PF</dt>
+      <dd><%= @salary.basic_of_pf%></dd>
+      <dt>Other Basic</dt>
+      <dd><%= @salary.other_basic%></dd>
+      <dt>HRA</dt>
+      <dd><%= @salary.hra%></dd>
+    </dl>
+  </div>
+  <div class="col-6">
+    <dt>PF</dt>
+      <dd><%= @salary.pf%></dd>
+      <dt>TDS</dt>
+      <dd><%= @salary.tds%></dd>
+      <dt>LIC</dt>
+      <dd><%= @salary.lic%></dd>
+    </dl>
+  </div>
+</div>
