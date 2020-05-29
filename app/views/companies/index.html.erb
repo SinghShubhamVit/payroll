@@ -1,0 +1,27 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Company Name</th>
+        <th>Primary Address</th>
+        <th>District</th>
+        <th>State</th>
+        <th>PIN</th>
+        <th>CIN</th>
+        <th>Show</th>
+      </tr>
+    </thead>
+
+     <tbody>
+      <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.name %></td>
+          <td><%= company.primary_address %></td>
+          <td><%= company.district%></td>
+          <td><%= company.state %></td>
+          <td><%= company.pin %></td>
+          <td><%= company.cin %></td>
+          <td><%= link_to '<button type="button">Show</button>'.html_safe, company_path(company.id) %></td>
+        </tr>
+      <% end %> 
+    </tbody>  
+</table>       
