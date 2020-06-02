@@ -6,6 +6,6 @@ class PayslipMailer < ApplicationMailer
 
   def send_payslip(pdf, file_name)
     attachments[file_name] = pdf
-    mail(to: 'nik@complitech.us', subject: 'Payslip')
+    mail(to: 'shubham.singh@complitech.net', subject: 'Payslip')
   end
 end

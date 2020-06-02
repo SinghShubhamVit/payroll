@@ -46,8 +46,8 @@ Rails.application.configure do
     port: 587,
     authentication: :plain,
     enable_starttls_auto: true,
-    user_name: 'subhams914@gmail.com',
-    password: '' #please ask subhams914@gmail.com for password
+    user_name: Rails.application.credentials.config[:email],
+    password: Rails.application.credentials.config[:password]
   }
 
   # Print deprecation notices to the Rails logger.
